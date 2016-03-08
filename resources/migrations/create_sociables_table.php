@@ -3,8 +3,16 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+/**
+ * Class CreateSociablesTable.
+ *
+ * @author DraperStudio <hello@draperstudio.tech>
+ */
 class CreateSociablesTable extends Migration
 {
+    /**
+     *
+     */
     public function up()
     {
         Schema::create('sociables', function (Blueprint $table) {
@@ -25,6 +33,9 @@ class CreateSociablesTable extends Migration
         });
     }
 
+    /**
+     *
+     */
     public function down()
     {
         Schema::drop('sociables');
