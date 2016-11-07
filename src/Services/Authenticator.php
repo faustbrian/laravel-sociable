@@ -4,7 +4,7 @@ namespace BrianFaust\Sociable\Services;
 
 use BrianFaust\Sociable\Events\UserHasSocialized;
 use Illuminate\Support\Facades\Event;
-use Laravel\Socialite\Contracts\Factory as Socialite;
+use Laravel\Socialite\Interfaces\Factory as Socialite;
 
 class Authenticator
 {

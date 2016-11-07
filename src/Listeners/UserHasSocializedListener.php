@@ -3,7 +3,7 @@
 namespace BrianFaust\Sociable\Listeners;
 
 use BrianFaust\Sociable\Events\UserHasSocialized;
-use BrianFaust\Sociable\Models\Provider;
+use BrianFaust\Sociable\Provider;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Collection;

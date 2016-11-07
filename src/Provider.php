@@ -1,6 +1,6 @@
 <?php
 
-namespace BrianFaust\Sociable\Models;
+namespace BrianFaust\Sociable;
 
 use Illuminate\Database\Eloquent\Model;
 

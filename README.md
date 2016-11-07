@@ -14,7 +14,7 @@ And then include the service provider within `app/config/app.php`.
 'providers' => [
     // ... Illuminate Providers
     // ... App Providers
-    BrianFaust\Sociable\ServiceProvider::class
+    BrianFaust\Sociable\SociableServiceProvider::class
 ];
 ```
 
@@ -39,7 +39,7 @@ $ php artisan migrate
 ``` php
 namespace App;
 
-use BrianFaust\Sociable\Traits\Sociable;
+use BrianFaust\Sociable\Sociable;
 use Illuminate\Database\Eloquent\Model;
 
 class User extends Model

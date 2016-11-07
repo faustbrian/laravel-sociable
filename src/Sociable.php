@@ -1,8 +1,8 @@
 <?php
 
-namespace BrianFaust\Sociable\Traits;
+namespace BrianFaust\Sociable;
 
-use BrianFaust\Sociable\Models\Provider;
+use BrianFaust\Sociable\Provider;
 
 trait Sociable
 {
