@@ -12,8 +12,6 @@ And then include the service provider within `app/config/app.php`.
 
 ``` php
 'providers' => [
-    // ... Illuminate Providers
-    // ... App Providers
     BrianFaust\Sociable\SociableServiceProvider::class
 ];
 ```
@@ -23,7 +21,7 @@ And then include the service provider within `app/config/app.php`.
 To get started, you'll need to publish all vendor assets:
 
 ```bash
-$ php artisan vendor:publish --provider="BrianFaust\Sociable\ServiceProvider"
+$ php artisan vendor:publish --provider="BrianFaust\Sociable\SociableServiceProvider"
 ```
 
 And then run the migrations to setup the database table.
