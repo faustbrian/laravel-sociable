@@ -11,9 +11,7 @@ $ composer require faustbrian/laravel-sociable
 And then include the service provider within `app/config/app.php`.
 
 ``` php
-'providers' => [
-    BrianFaust\Sociable\SociableServiceProvider::class
-];
+BrianFaust\Sociable\SociableServiceProvider::class
 ```
 
 ## Migration
