@@ -38,7 +38,7 @@ class Authenticator
 
     public function execute($hasCode)
     {
-        if (! $hasCode) {
+        if (!$hasCode) {
             return $this->getAuthorizationFirst();
         }
 
