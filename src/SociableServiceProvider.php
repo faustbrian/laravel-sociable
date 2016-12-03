@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Sociable;
 
 use BrianFaust\ServiceProvider\ServiceProvider;
@@ -18,12 +20,12 @@ use Laravel\Socialite\SocialiteServiceProvider;
 
 class SociableServiceProvider extends ServiceProvider
 {
-    public function boot()
+    public function boot(): void
     {
         $this->publishMigrations();
     }
 
-    public function register()
+    public function register(): void
     {
         parent::register();
 
@@ -35,14 +37,14 @@ class SociableServiceProvider extends ServiceProvider
         );
     }
 
-    public function provides()
+    public function provides(): array
     {
         return array_merge(parent::provides(), [
             SocialiteServiceProvider::class,
         ]);
     }
 
-    public function getPackageName()
+    public function getPackageName(): string
     {
         return 'sociable';
     }
