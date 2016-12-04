@@ -22,12 +22,12 @@ declare(strict_types=1);
 
 namespace BrianFaust\Sociable;
 
-use BrianFaust\ServiceProvider\ServiceProvider;
+use BrianFaust\ServiceProvider\AbstractServiceProvider;
 use BrianFaust\Sociable\Events\UserHasSocialized;
 use BrianFaust\Sociable\Listeners\UserHasSocializedListener;
 use Laravel\Socialite\SocialiteServiceProvider;
 
-class SociableServiceProvider extends ServiceProvider
+class SociableServiceProvider extends AbstractServiceProvider
 {
     public function boot(): void
     {
