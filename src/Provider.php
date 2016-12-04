@@ -23,6 +23,7 @@ declare(strict_types=1);
 namespace BrianFaust\Sociable;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 class Provider extends Model
 {
@@ -34,7 +35,7 @@ class Provider extends Model
 
     protected $casts = ['user' => 'array'];
 
-    public function model()
+    public function model(): MorphTo
     {
         return $this->morphTo();
     }
