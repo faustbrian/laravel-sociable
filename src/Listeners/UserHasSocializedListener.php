@@ -47,7 +47,7 @@ class UserHasSocializedListener
         } catch (ModelNotFoundException $e) {
             $provider = new Provider(
                 $profile->merge([
-                    'uid' => $profile->get('id'),
+                    'uid'      => $profile->get('id'),
                     'provider' => $event->provider,
                 ])->toArray()
             );
