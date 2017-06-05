@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel Sociable.
  *
@@ -14,39 +11,25 @@ declare(strict_types=1);
 
 namespace BrianFaust\Sociable;
 
-use BrianFaust\ServiceProvider\AbstractServiceProvider;
-use BrianFaust\Sociable\Events\UserHasSocialized;
-use BrianFaust\Sociable\Listeners\UserHasSocializedListener;
+use Illuminate\Support\ServiceProvider;
 use Laravel\Socialite\SocialiteServiceProvider;
 
-class SociableServiceProvider extends AbstractServiceProvider
+class SociableServiceProvider extends ServiceProvider
 {
-    public function boot(): void
+    public function boot()
     {
-        $this->publishMigrations();
+        $this->publishes([
+            __DIR__.'/../database/migrations' => database_path('migrations'),
+        ], 'migrations');
     }
 
-    public function register(): void
+    public function register()
     {
-        parent::register();
-
         $this->app->register(SocialiteServiceProvider::class);
 
         $this->app['events']->listen(
-            UserHasSocialized::class,
-            UserHasSocializedListener::class
+            Events\UserHasSocialized::class,
+            Listeners\UserHasSocializedListener::class
         );
-    }
-
-    public function provides(): array
-    {
-        return array_merge(parent::provides(), [
-            SocialiteServiceProvider::class,
-        ]);
-    }
-
-    public function getPackageName(): string
-    {
-        return 'sociable';
     }
 }

@@ -10,12 +10,6 @@ Require this package, with [Composer](https://getcomposer.org/), in the root dir
 $ composer require faustbrian/laravel-sociable
 ```
 
-And then include the service provider within `app/config/app.php`.
-
-``` php
-BrianFaust\Sociable\SociableServiceProvider::class
-```
-
 ## Migration
 
 To get started, you'll need to publish all vendor assets:
@@ -74,19 +68,11 @@ If you need to have your own way of handling the response take a look at `UserHa
 
 Once you've done that you can just use `->event(MyCustomEvent::class)` and the response will be passed through to your event.
 
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
 ## Testing
 
 ``` bash
 $ phpunit
 ```
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
