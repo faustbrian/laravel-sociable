@@ -16,6 +16,9 @@ use Laravel\Socialite\SocialiteServiceProvider;
 
 class SociableServiceProvider extends ServiceProvider
 {
+    /**
+     * Bootstrap any application services.
+     */
     public function boot()
     {
         $this->publishes([
@@ -23,6 +26,9 @@ class SociableServiceProvider extends ServiceProvider
         ], 'migrations');
     }
 
+    /**
+     * Register any application services.
+     */
     public function register()
     {
         $this->app->register(SocialiteServiceProvider::class);
