@@ -11,8 +11,8 @@
 
 namespace BrianFaust\Sociable\Services;
 
-use BrianFaust\Sociable\Events\UserHasSocialized;
 use Illuminate\Support\Facades\Event;
+use BrianFaust\Sociable\Events\UserHasSocialized;
 use Laravel\Socialite\Interfaces\Factory as Socialite;
 
 class Authenticator
@@ -38,7 +38,7 @@ class Authenticator
 
     public function execute($hasCode)
     {
-        if (!$hasCode) {
+        if (! $hasCode) {
             return $this->getAuthorizationFirst();
         }
 
