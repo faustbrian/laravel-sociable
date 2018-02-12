@@ -13,11 +13,11 @@ declare(strict_types=1);
 
 namespace BrianFaust\Sociable\Listeners;
 
-use BrianFaust\Sociable\Provider;
-use Illuminate\Support\Collection;
-use Illuminate\Database\Eloquent\Model;
 use BrianFaust\Sociable\Events\UserHasSocialized;
+use BrianFaust\Sociable\Provider;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Support\Collection;
 
 class UserHasSocializedListener
 {
