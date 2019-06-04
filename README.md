@@ -1,16 +1,16 @@
 # Laravel Sociable
 
-[![Build Status](https://img.shields.io/travis/faustbrian/Laravel-Sociable/master.svg?style=flat-square)](https://travis-ci.org/faustbrian/Laravel-Sociable)
-[![PHP from Packagist](https://img.shields.io/packagist/php-v/faustbrian/laravel-sociable.svg?style=flat-square)]()
-[![Latest Version](https://img.shields.io/github/release/faustbrian/Laravel-Sociable.svg?style=flat-square)](https://github.com/faustbrian/Laravel-Sociable/releases)
-[![License](https://img.shields.io/packagist/l/faustbrian/Laravel-Sociable.svg?style=flat-square)](https://packagist.org/packages/faustbrian/Laravel-Sociable)
+[![Build Status](https://img.shields.io/travis/artisanry/Sociable/master.svg?style=flat-square)](https://travis-ci.org/artisanry/Sociable)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/artisanry/sociable.svg?style=flat-square)]()
+[![Latest Version](https://img.shields.io/github/release/artisanry/Sociable.svg?style=flat-square)](https://github.com/artisanry/Sociable/releases)
+[![License](https://img.shields.io/packagist/l/artisanry/Sociable.svg?style=flat-square)](https://packagist.org/packages/artisanry/Sociable)
 
 ## Installation
 
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ``` bash
-$ composer require faustbrian/laravel-sociable
+$ composer require artisanry/sociable
 ```
 
 ## Migration
@@ -18,7 +18,7 @@ $ composer require faustbrian/laravel-sociable
 To get started, you'll need to publish all vendor assets:
 
 ```bash
-$ php artisan vendor:publish --provider="BrianFaust\Sociable\SociableServiceProvider"
+$ php artisan vendor:publish --provider="Artisanry\Sociable\SociableServiceProvider"
 ```
 
 And then run the migrations to setup the database table.
@@ -34,7 +34,7 @@ $ php artisan migrate
 ``` php
 namespace App;
 
-use BrianFaust\Sociable\Sociable;
+use Artisanry\Sociable\Sociable;
 use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
@@ -46,8 +46,8 @@ class User extends Model
 ##### Authenticating a User
 
 ``` php
-use BrianFaust\Sociable\Services\Authenticator;
-use BrianFaust\Sociable\Events\UserHasSocialized;
+use Artisanry\Sociable\Services\Authenticator;
+use Artisanry\Sociable\Events\UserHasSocialized;
 
 $router->get('/', function (Authenticator $authenticate, Request $request) {
     return $authenticate->provider('github') // authenticate with github
@@ -79,7 +79,7 @@ $ phpunit
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to hello@brianfaust.me. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to hello@basecode.sh. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
@@ -88,4 +88,4 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## License
 
-[MIT](LICENSE) © [Brian Faust](https://brianfaust.me)
+[MIT](LICENSE) © [Brian Faust](https://basecode.sh)

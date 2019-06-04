@@ -5,15 +5,15 @@ declare(strict_types=1);
 /*
  * This file is part of Laravel Sociable.
  *
- * (c) Brian Faust <hello@brianfaust.de>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Sociable\Services;
+namespace Artisanry\Sociable\Services;
 
-use BrianFaust\Sociable\Events\UserHasSocialized;
+use Artisanry\Sociable\Events\UserHasSocialized;
 use Illuminate\Support\Facades\Event;
 use Laravel\Socialite\Interfaces\Factory as Socialite;
 
