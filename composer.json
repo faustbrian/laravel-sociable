@@ -18,7 +18,7 @@
     "require": {
         "php": "^7.2",
         "illuminate/support": "^5.8",
-        "laravel/socialite": "^3.0"
+        "laravel/socialite": "^4.1"
     },
     "require-dev": {
         "graham-campbell/testbench": "^5.0",
